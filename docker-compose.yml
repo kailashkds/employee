@@ -7,7 +7,7 @@ services:
           - 80:80
         volumes:
           - ./docker/apache/config/vhosts:/etc/apache2/sites-enabled
-          - ./jobportal:/home/wwwroot/sf3/jobportal
+          - ./employee:/home/wwwroot/sf3/employee
         depends_on:
           - php
 
@@ -48,5 +48,5 @@ services:
 volumes:
     mariadb:
 
-#docker exec -it -u www-data  sf3_php php sf3/jobportal/bin/console doctrine:database:create
+#docker exec -it -u www-data  sf3_php php sf3/employee/bin/console doctrine:database:create
 
